@@ -1,5 +1,8 @@
 # VIGENERE-CIPHER
 ## EX. NO: 4
+
+## NAME : YUGABHARATHI T
+## REG.NO : 212224040375
  
 
 ## IMPLEMETATION OF VIGENERE CIPHER
@@ -30,7 +33,45 @@ STEP-8: Repeat the above steps to generate the entire cipher text.
 
 
 ## PROGRAM
+```
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+int main()
+{
+    char plain[100], key[100], cipher[100];
+    int i, k = 0;
+    printf("Enter Plain Text: ");
+    scanf("%s", plain);
+    printf("Enter Key: ");
+    scanf("%s", key);
+    int pLen = strlen(plain);
+    int kLen = strlen(key);
+    for(i = 0; i < pLen; i++)
+    {
+        if(isalpha(plain[i]))
+        {
+            int p = toupper(plain[i]) - 'A';
+            int keyVal = toupper(key[k % kLen]) - 'A';
+
+            cipher[i] = (p + keyVal) % 26 + 'A';
+            k++;
+        }
+        else
+        {
+            cipher[i] = plain[i]; 
+        }
+    }
+
+    cipher[i] = '\0';
+    printf("\nEncrypted Cipher Text: %s\n", cipher);
+}
+
+```
 
 ## OUTPUT
+<img width="1677" height="1042" alt="image" src="https://github.com/user-attachments/assets/276aa561-fa06-4a58-b60c-a49eb6d327ae" />
+
 
 ## RESULT
+
