@@ -74,4 +74,5 @@ int main()
 
 
 ## RESULT
+Thus, the Vigenere Cipher substitution technique was successfully implemented using a C program. The plaintext was encrypted correctly using a repeating keyword to generate the corresponding ciphertext.
 
